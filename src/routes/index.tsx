@@ -94,6 +94,11 @@ const services = [
   },
 ];
 
+const officeAddress =
+  "Office No. D-4, 4th Floor, 24th Commercial Street, DHA Phase 5 Tauheed Commercial Area, Defence V, Clifton, Karachi, 75500, Pakistan";
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
+const mapsEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(officeAddress)}&z=16&output=embed`;
+
 const steps = [
   { n: "01", t: "Free profile assessment", d: "We review academics, budget and goals to map realistic options." },
   { n: "02", t: "University shortlist", d: "A curated list of programmes with intakes, fees and scholarships." },
@@ -342,10 +347,36 @@ function Index() {
                       info@globalsiaconsults.com
                     </a>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <MapPin className="size-4" /> Lahore, Pakistan · Mon–Sat 10:30–18:30
+                  <li className="flex items-start gap-3">
+                    <MapPin className="mt-0.5 size-4 shrink-0" />
+                    <span>
+                      Office No. D-4, 4th Floor, 24th Commercial Street, DHA Phase 5, Tauheed
+                      Commercial Area, Defence V, Clifton, Karachi 75500, Pakistan
+                      <br />
+                      Mon–Sat 10:30–18:30
+                    </span>
                   </li>
                 </ul>
+
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open our office location in Google Maps"
+                  className="group mt-8 block overflow-hidden rounded-2xl border border-primary-foreground/20 shadow-lift"
+                >
+                  <iframe
+                    title="SIA Global Consults office location map"
+                    src={mapsEmbedUrl}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="pointer-events-none h-56 w-full border-0"
+                  />
+                  <span className="flex items-center justify-between bg-background px-4 py-3 text-sm font-semibold text-foreground">
+                    Get directions on Google Maps
+                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </a>
               </div>
 
               <form
