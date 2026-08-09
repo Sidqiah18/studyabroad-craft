@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Mail, Clock } from "lucide-react";
+import { ApplyDialog } from "./ApplyDialog";
+
 
 const links = [
   { href: "#about", label: "About" },
@@ -50,12 +52,12 @@ export function SiteHeader() {
           </div>
 
           <div className="flex items-center gap-2">
-            <a
-              href="#contact"
-              className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-transform hover:-translate-y-0.5 sm:inline-block"
-            >
-              Apply Now
-            </a>
+            <ApplyDialog>
+              <button className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-transform hover:-translate-y-0.5 sm:inline-block">
+                Apply Now
+              </button>
+            </ApplyDialog>
+
             <button
               aria-label="Toggle menu"
               onClick={() => setOpen((v) => !v)}
