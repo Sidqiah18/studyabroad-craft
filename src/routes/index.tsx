@@ -96,8 +96,11 @@ const services = [
 
 const officeAddress =
   "Office No. D-4, 4th Floor, 24th Commercial Street, DHA Phase 5 Tauheed Commercial Area, Defence V, Clifton, Karachi, 75500, Pakistan";
+const officeLat = 24.8021;
+const officeLng = 67.0555;
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
-const mapsEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(officeAddress)}&z=16&output=embed`;
+// OpenStreetMap embed: framing-friendly (Google blocks its embed on some hosts)
+const mapsEmbedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${officeLng - 0.006}%2C${officeLat - 0.004}%2C${officeLng + 0.006}%2C${officeLat + 0.004}&layer=mapnik&marker=${officeLat}%2C${officeLng}`;
 
 const steps = [
   { n: "01", t: "Free profile assessment", d: "We review academics, budget and goals to map realistic options." },
