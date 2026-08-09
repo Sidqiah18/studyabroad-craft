@@ -124,12 +124,12 @@ function Index() {
                 you through every step with transparent, expert advice.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5"
-                >
-                  Get free consultation <ArrowRight className="size-4" />
-                </a>
+                <ApplyDialog>
+                  <button className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5">
+                    Apply now <ArrowRight className="size-4" />
+                  </button>
+                </ApplyDialog>
+
                 <a
                   href="#destinations"
                   className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold transition-colors hover:border-primary hover:text-primary"
