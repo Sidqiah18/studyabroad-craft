@@ -13,8 +13,19 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-student.jpg";
 import aboutImg from "@/assets/about-students.jpg";
+import destUk from "@/assets/dest-uk.jpg";
+import destUsa from "@/assets/dest-usa.jpg";
+import destAustralia from "@/assets/dest-australia.jpg";
+import destCanada from "@/assets/dest-canada.jpg";
+import destEurope from "@/assets/dest-europe.jpg";
+import destMalaysia from "@/assets/dest-malaysia.jpg";
+import destTurkey from "@/assets/dest-turkey.jpg";
+import destUae from "@/assets/dest-uae.jpg";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { CountUp } from "@/components/site/CountUp";
+import { ApplyDialog } from "@/components/site/ApplyDialog";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,15 +50,16 @@ export const Route = createFileRoute("/")({
 });
 
 const destinations = [
-  { name: "United Kingdom", flag: "🇬🇧", note: "1-year master's, post-study work" },
-  { name: "United States", flag: "🇺🇸", note: "Top-ranked research universities" },
-  { name: "Australia", flag: "🇦🇺", note: "Generous post-study work rights" },
-  { name: "Canada", flag: "🇨🇦", note: "Affordable, PR-friendly pathways" },
-  { name: "Europe", flag: "🇪🇺", note: "Low tuition, English-taught degrees" },
-  { name: "Malaysia", flag: "🇲🇾", note: "Budget-friendly quality education" },
-  { name: "Turkey", flag: "🇹🇷", note: "Scholarships & rich culture" },
-  { name: "UAE", flag: "🇦🇪", note: "Global campuses close to home" },
+  { name: "United Kingdom", flag: "🇬🇧", note: "1-year master's, post-study work", img: destUk },
+  { name: "United States", flag: "🇺🇸", note: "Top-ranked research universities", img: destUsa },
+  { name: "Australia", flag: "🇦🇺", note: "Generous post-study work rights", img: destAustralia },
+  { name: "Canada", flag: "🇨🇦", note: "Affordable, PR-friendly pathways", img: destCanada },
+  { name: "Europe", flag: "🇪🇺", note: "Low tuition, English-taught degrees", img: destEurope },
+  { name: "Malaysia", flag: "🇲🇾", note: "Budget-friendly quality education", img: destMalaysia },
+  { name: "Turkey", flag: "🇹🇷", note: "Scholarships & rich culture", img: destTurkey },
+  { name: "UAE", flag: "🇦🇪", note: "Global campuses close to home", img: destUae },
 ];
+
 
 const services = [
   {
@@ -112,12 +124,12 @@ function Index() {
                 you through every step with transparent, expert advice.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5"
-                >
-                  Get free consultation <ArrowRight className="size-4" />
-                </a>
+                <ApplyDialog>
+                  <button className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5">
+                    Apply now <ArrowRight className="size-4" />
+                  </button>
+                </ApplyDialog>
+
                 <a
                   href="#destinations"
                   className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold transition-colors hover:border-primary hover:text-primary"
@@ -128,16 +140,19 @@ function Index() {
 
               <dl className="mt-10 grid max-w-md grid-cols-3 gap-4">
                 {[
-                  ["$10M+", "Scholarships won"],
-                  ["99%", "Visa success rate"],
-                  ["100+", "University partners"],
-                ].map(([v, l]) => (
-                  <div key={l} className="rounded-2xl border border-border bg-card p-4 shadow-soft">
-                    <dt className="font-display text-xl font-bold text-primary">{v}</dt>
-                    <dd className="mt-1 text-xs text-muted-foreground">{l}</dd>
+                  { v: 10, prefix: "$", suffix: "M+", l: "Scholarships won" },
+                  { v: 99, prefix: "", suffix: "%", l: "Visa success rate" },
+                  { v: 100, prefix: "", suffix: "+", l: "University partners" },
+                ].map((s) => (
+                  <div key={s.l} className="rounded-2xl border border-border bg-card p-4 shadow-soft">
+                    <dt className="font-display text-xl font-bold text-primary">
+                      <CountUp value={s.v} prefix={s.prefix} suffix={s.suffix} />
+                    </dt>
+                    <dd className="mt-1 text-xs text-muted-foreground">{s.l}</dd>
                   </div>
                 ))}
               </dl>
+
             </div>
 
             <div className="relative">
@@ -222,18 +237,36 @@ function Index() {
                 <a
                   key={d.name}
                   href="#contact"
-                  className="group rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:border-primary hover:shadow-lift"
+                  className="group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-lift"
                 >
-                  <span className="text-2xl">{d.flag}</span>
-                  <h3 className="mt-3 font-display text-base font-bold">{d.name}</h3>
-                  <p className="mt-1 text-xs text-muted-foreground">{d.note}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary">
-                    Learn more{" "}
-                    <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
-                  </span>
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={d.img}
+                      alt={`Study in ${d.name}`}
+                      loading="lazy"
+                      width={768}
+                      height={512}
+                      className="size-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-95" />
+                    <span className="absolute left-3 top-3 rounded-full bg-background/90 px-2 py-1 text-sm">
+                      {d.flag}
+                    </span>
+                    <h3 className="absolute bottom-3 left-3 right-3 font-display text-base font-bold text-background">
+                      {d.name}
+                    </h3>
+                  </div>
+                  <div className="p-5">
+                    <p className="text-xs text-muted-foreground">{d.note}</p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
+                      Learn more{" "}
+                      <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </div>
                 </a>
               ))}
             </div>
+
           </div>
         </section>
 
@@ -355,8 +388,9 @@ function Index() {
                     type="submit"
                     className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
                   >
-                    Request free consultation
+                    Submit enquiry
                   </button>
+
                 </div>
               </form>
             </div>
