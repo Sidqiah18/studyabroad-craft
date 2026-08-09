@@ -363,7 +363,12 @@ function Index() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open our office location in Google Maps"
-                  className="group mt-8 block overflow-hidden rounded-2xl border border-primary-foreground/20 shadow-lift"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const w = window.open(mapsUrl, "_blank", "noopener,noreferrer");
+                    if (!w) window.top!.location.href = mapsUrl;
+                  }}
+                  className="group mt-8 block cursor-pointer overflow-hidden rounded-2xl border border-primary-foreground/20 shadow-lift"
                 >
                   <iframe
                     title="SIA Global Consults office location map"
