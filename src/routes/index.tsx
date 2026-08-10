@@ -121,7 +121,7 @@ function Index() {
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary">
                 Study abroad consultants
               </span>
-              <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 font-recoleta text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
                 Making international education{" "}
                 <span className="text-gradient">accessible to everyone.</span>
               </h1>
