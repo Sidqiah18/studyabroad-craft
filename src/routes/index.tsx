@@ -96,11 +96,9 @@ const services = [
 
 const officeAddress =
   "Office No. D-4, 4th Floor, 24th Commercial Street, DHA Phase 5 Tauheed Commercial Area, Defence V, Clifton, Karachi, 75500, Pakistan";
-const officeLat = 24.8021;
-const officeLng = 67.0555;
-const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
-// OpenStreetMap embed: framing-friendly (Google blocks its embed on some hosts)
-const mapsEmbedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${officeLng - 0.006}%2C${officeLat - 0.004}%2C${officeLng + 0.006}%2C${officeLat + 0.004}&layer=mapnik&marker=${officeLat}%2C${officeLng}`;
+const mapsUrl = "https://www.google.com/maps/search/?api=1&query=SIA+Global+Consultants&query_place_id=ChIJU9xNTgA9sz4Rk1BEzMO1U7k";
+const mapsEmbedUrl =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.620240216349!2d67.03665677436291!3d24.808454147338516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33d004e4ddc53%3A0xb953b5c3cc445093!2sSIA%20Global%20Consultants!5e0!3m2!1sen!2s!4v1786349303159!5m2!1sen!2s";
 
 const steps = [
   { n: "01", t: "Free profile assessment", d: "We review academics, budget and goals to map realistic options." },
@@ -361,30 +359,26 @@ function Index() {
                   </li>
                 </ul>
 
-                <a
-                  href={mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open our office location in Google Maps"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const w = window.open(mapsUrl, "_blank", "noopener,noreferrer");
-                    if (!w) window.top!.location.href = mapsUrl;
-                  }}
-                  className="group mt-8 block cursor-pointer overflow-hidden rounded-2xl border border-primary-foreground/20 shadow-lift"
-                >
+                <div className="mt-8 overflow-hidden rounded-2xl border border-primary-foreground/20 shadow-lift">
                   <iframe
-                    title="SIA Global Consults office location map"
+                    title="SIA Global Consultants office location map"
                     src={mapsEmbedUrl}
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="pointer-events-none h-56 w-full border-0"
+                    allowFullScreen
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    className="h-64 w-full border-0"
                   />
-                  <span className="flex items-center justify-between bg-background px-4 py-3 text-sm font-semibold text-foreground">
+                  <a
+                    href={mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center justify-between bg-background px-4 py-3 text-sm font-semibold text-foreground"
+                  >
                     Get directions on Google Maps
                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </a>
+                  </a>
+                </div>
+
               </div>
 
               <form
