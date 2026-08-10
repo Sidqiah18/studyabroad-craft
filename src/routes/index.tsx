@@ -243,7 +243,7 @@ function Index() {
                 <a
                   key={d.name}
                   href="#contact"
-                  className="group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-lift"
+                  className="group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-lift focus:outline-none focus-visible:border-primary"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img
@@ -254,14 +254,19 @@ function Index() {
                       height={512}
                       className="size-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-95" />
-                    <span className="absolute left-3 top-3 rounded-full bg-background/90 px-2 py-1 text-sm">
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-40" />
+                    {/* Sky blue tint that washes over the image on hover/tap */}
+                    <div className="absolute inset-0 bg-aqua/60 mix-blend-multiply opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100" />
+                    <span className="absolute left-3 top-3 rounded-full bg-background/90 px-2 py-1 text-sm transition-transform duration-300 group-hover:scale-110">
                       {d.flag}
                     </span>
-                    <h3 className="absolute bottom-3 left-3 right-3 font-display text-base font-bold text-background">
+                    <h3 className="absolute bottom-3 left-3 right-3 font-display text-base font-bold text-background transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:tracking-wide group-hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]">
                       {d.name}
+                      <span className="mt-1 block h-0.5 w-0 rounded-full bg-background/90 transition-all duration-500 ease-out group-hover:w-12" />
                     </h3>
                   </div>
+
                   <div className="p-5">
                     <p className="text-xs text-muted-foreground">{d.note}</p>
                     <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
