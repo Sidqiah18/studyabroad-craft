@@ -359,30 +359,26 @@ function Index() {
                   </li>
                 </ul>
 
-                <a
-                  href={mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open our office location in Google Maps"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const w = window.open(mapsUrl, "_blank", "noopener,noreferrer");
-                    if (!w) window.top!.location.href = mapsUrl;
-                  }}
-                  className="group mt-8 block cursor-pointer overflow-hidden rounded-2xl border border-primary-foreground/20 shadow-lift"
-                >
+                <div className="mt-8 overflow-hidden rounded-2xl border border-primary-foreground/20 shadow-lift">
                   <iframe
-                    title="SIA Global Consults office location map"
+                    title="SIA Global Consultants office location map"
                     src={mapsEmbedUrl}
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="pointer-events-none h-56 w-full border-0"
+                    allowFullScreen
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    className="h-64 w-full border-0"
                   />
-                  <span className="flex items-center justify-between bg-background px-4 py-3 text-sm font-semibold text-foreground">
+                  <a
+                    href={mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center justify-between bg-background px-4 py-3 text-sm font-semibold text-foreground"
+                  >
                     Get directions on Google Maps
                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </a>
+                  </a>
+                </div>
+
               </div>
 
               <form
