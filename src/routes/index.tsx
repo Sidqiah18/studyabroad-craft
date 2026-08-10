@@ -300,14 +300,22 @@ function Index() {
             {services.map((s) => (
               <div
                 key={s.title}
-                className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-transform hover:-translate-y-1"
+                className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-soft transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-primary hover:shadow-lift"
               >
-                <span className="grid size-11 place-items-center rounded-xl bg-hero-gradient text-primary-foreground">
-                  <s.icon className="size-5" />
-                </span>
-                <h3 className="mt-4 font-display text-lg font-bold">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.body}</p>
+                <div className="pointer-events-none absolute inset-0 bg-hero-gradient opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100 group-focus-within:opacity-100" />
+                <div className="relative">
+                  <span className="grid size-11 place-items-center rounded-xl bg-hero-gradient text-primary-foreground transition-all duration-500 group-hover:scale-110 group-hover:bg-none group-hover:bg-background/20">
+                    <s.icon className="size-5" />
+                  </span>
+                  <h3 className="mt-4 font-display text-lg font-bold transition-colors duration-500 group-hover:text-primary-foreground">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground transition-colors duration-500 group-hover:text-primary-foreground/90">
+                    {s.body}
+                  </p>
+                </div>
               </div>
+
             ))}
           </div>
         </section>
