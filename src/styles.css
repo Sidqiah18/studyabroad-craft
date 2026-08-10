@@ -19,6 +19,7 @@
   --radius-4xl: calc(var(--radius) + 16px);
   --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-recoleta: "Recoleta", "Fraunces", ui-serif, Georgia, serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
