@@ -25,6 +25,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { CountUp } from "@/components/site/CountUp";
 import { ApplyDialog } from "@/components/site/ApplyDialog";
+import { SuccessStories } from "@/components/site/SuccessStories";
 
 
 export const Route = createFileRoute("/")({
