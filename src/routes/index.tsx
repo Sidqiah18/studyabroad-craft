@@ -337,8 +337,11 @@ function Index() {
           </div>
         </section>
 
+        <SuccessStories />
+
         {/* Contact / CTA */}
         <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
+
           <div className="overflow-hidden rounded-3xl bg-hero-gradient p-8 text-primary-foreground shadow-lift sm:p-12">
             <div className="grid gap-10 lg:grid-cols-2">
               <div>
