@@ -450,7 +450,9 @@ function Index() {
                 </div>
               </form>
             </div>
+            </div>
           </div>
+
         </section>
       </main>
 
