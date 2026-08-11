@@ -340,18 +340,24 @@ function Index() {
         <SuccessStories />
 
         {/* Contact / CTA */}
-        <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
+        <section id="contact" className="py-20">
+          <div className="w-full bg-hero-gradient px-6 py-14 text-primary-foreground shadow-lift">
+            <div className="mx-auto max-w-6xl text-center">
+              <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
+                Your study abroad journey starts with SIA Global Consults
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl opacity-90">
+                Book a free consultation and get a realistic plan for your admission, scholarship
+                and visa — no obligations.
+              </p>
+            </div>
+          </div>
 
-          <div className="overflow-hidden rounded-3xl bg-hero-gradient p-8 text-primary-foreground shadow-lift sm:p-12">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="mt-10 overflow-hidden rounded-3xl bg-hero-gradient p-8 text-primary-foreground shadow-lift sm:p-12">
             <div className="grid gap-10 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold sm:text-4xl">
-                  Your study abroad journey starts with SIA
-                </h2>
-                <p className="mt-4 max-w-md opacity-90">
-                  Book a free consultation and get a realistic plan for your admission, scholarship
-                  and visa — no obligations.
-                </p>
+
                 <ul className="mt-8 space-y-3 text-sm">
                   <li className="flex items-center gap-3">
                     <Phone className="size-4" />
