@@ -133,7 +133,7 @@ function Index() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <ApplyDialog>
                   <button className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5">
-                    Apply now <ArrowRight className="size-4" />
+                    Get a free consultation <ArrowRight className="size-4" />
                   </button>
                 </ApplyDialog>
 
@@ -344,7 +344,7 @@ function Index() {
           <div className="w-full bg-hero-gradient px-6 py-14 text-primary-foreground shadow-lift">
             <div className="mx-auto max-w-6xl text-center">
               <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
-                Your study abroad journey starts with SIA Global Consults
+                Your study abroad journey starts with SIA Global Consultants
               </h2>
               <p className="mx-auto mt-4 max-w-2xl opacity-90">
                 Book a free consultation and get a realistic plan for your admission, scholarship

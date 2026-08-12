@@ -55,7 +55,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-2">
             <ApplyDialog>
               <button className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-transform hover:-translate-y-0.5 sm:inline-block">
-                Apply Now
+                Get a free consultation
               </button>
             </ApplyDialog>
 
