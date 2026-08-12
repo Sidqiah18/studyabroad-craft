@@ -209,7 +209,7 @@ function Index() {
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                 {[
                   "Transparent counselling",
-                  "Certified expert counsellors",
+                  "British Council- Trained & Certified",
                   "End-to-end visa assistance",
                   "Scholarship-first approach",
                 ].map((i) => (
