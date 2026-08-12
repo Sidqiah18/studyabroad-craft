@@ -289,7 +289,7 @@ function Index() {
               What we do
             </span>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              How SIA Global Consults helps you
+              How SIA Global Consultants helps you
             </h2>
             <p className="mt-4 text-muted-foreground">
               We make your entire study abroad journey easy — from shortlisting universities to
