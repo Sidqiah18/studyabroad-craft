@@ -55,10 +55,10 @@ const destinations = [
   { name: "United States", flag: "🇺🇸", note: "Your global education journey starts here—USA", img: destUsa },
   { name: "Australia", flag: "🇦🇺", note: "Your global education journey starts here—Australia", img: destAustralia },
   { name: "Canada", flag: "🇨🇦", note: "Your global education journey starts here—Canada", img: destCanada },
-  { name: "Europe", flag: "🇪🇺", note: "Low tuition, English-taught degrees", img: destEurope },
-  { name: "Malaysia", flag: "🇲🇾", note: "Budget-friendly quality education", img: destMalaysia },
-  { name: "Turkey", flag: "🇹🇷", note: "Scholarships & rich culture", img: destTurkey },
-  { name: "UAE", flag: "🇦🇪", note: "Global campuses close to home", img: destUae },
+  { name: "Europe", flag: "🇪🇺", note: "Your global education journey starts here—Europe", img: destEurope },
+  { name: "Malaysia", flag: "🇲🇾", note: "Your global education journey starts here—Malaysia", img: destMalaysia },
+  { name: "Turkey", flag: "🇹🇷", note: "Your global education journey starts here—Turkey", img: destTurkey },
+  { name: "UAE", flag: "🇦🇪", note: "Your global education journey starts here—UAE", img: destUae },
 ];
 
 
