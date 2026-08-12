@@ -85,7 +85,7 @@ const services = [
   },
   {
     icon: Plane,
-    title: "Smooth Transition",
+    title: "Seamless Transition",
     body: "Pre-departure briefing, accommodation help and settling-in advice for your first weeks.",
   },
   {
