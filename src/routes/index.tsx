@@ -234,8 +234,8 @@ function Index() {
                 Destinations for international students
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Ready to launch the next phase of your academic and professional growth? Pick a
-                destination and let us take the wheel.
+                Big dreams deserve a bigger journey. Pick your destination and let us help you get
+                there.
               </p>
             </div>
 
