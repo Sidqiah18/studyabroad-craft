@@ -198,7 +198,7 @@ function Index() {
                 One of Pakistan's most trusted study abroad partners
               </h2>
               <p className="mt-4 text-muted-foreground">
-                At SIA Global Consults we specialise in clear, transparent and expert guidance for
+                At SIA Global Consultants we specialise in clear, transparent and expert guidance for
                 students planning their education overseas. Our counsellors know international
                 education systems, visa processes and scholarship opportunities inside out.
               </p>
