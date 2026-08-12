@@ -211,7 +211,7 @@ function Index() {
                   "Transparent counselling",
                   "British Council- Trained & Certified",
                   "End-to-end process assistance",
-                  "Scholarship-first approach",
+                  "Scholarship",
                 ].map((i) => (
                   <li key={i} className="flex items-start gap-2 text-sm">
                     <ShieldCheck className="mt-0.5 size-4 shrink-0 text-primary" />
