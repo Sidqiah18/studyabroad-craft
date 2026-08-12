@@ -75,7 +75,7 @@ const services = [
   },
   {
     icon: FileCheck2,
-    title: "Smart Application",
+    title: "Application Excellence",
     body: "SOP and document preparation, application submission and offer letter follow-up.",
   },
   {
