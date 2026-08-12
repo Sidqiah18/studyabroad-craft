@@ -204,7 +204,7 @@ function Index() {
               </p>
               <p className="mt-4 text-muted-foreground">
                 Every case is handled with integrity and professionalism — no false promises, just a
-                realistic plan built around your profile and budget.
+                holistic plan built around your profile and budget.
               </p>
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                 {[
