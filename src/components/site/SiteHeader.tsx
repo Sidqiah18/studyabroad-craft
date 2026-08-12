@@ -82,6 +82,14 @@ export function SiteHeader() {
                   {l.label}
                 </a>
               ))}
+              <ApplyDialog>
+                <button
+                  onClick={() => setOpen(false)}
+                  className="mt-3 inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft"
+                >
+                  Get a free consultation
+                </button>
+              </ApplyDialog>
             </div>
           </div>
         )}
