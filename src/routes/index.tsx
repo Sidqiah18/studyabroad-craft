@@ -127,7 +127,7 @@ function Index() {
                 <span className="text-gradient">accessible to everyone.</span>
               </h1>
               <p className="mt-5 max-w-lg text-base text-muted-foreground sm:text-lg">
-                From choosing the right university to landing your visa, SIA Global Consults guides
+                From choosing the right university to landing your visa, SIA Global Consultants guides
                 you through every step with transparent, expert advice.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
