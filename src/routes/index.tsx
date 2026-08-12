@@ -51,14 +51,14 @@ export const Route = createFileRoute("/")({
 });
 
 const destinations = [
-  { name: "United Kingdom", flag: "🇬🇧", note: "1-year master's, post-study work", img: destUk },
-  { name: "United States", flag: "🇺🇸", note: "Top-ranked research universities", img: destUsa },
-  { name: "Australia", flag: "🇦🇺", note: "Generous post-study work rights", img: destAustralia },
-  { name: "Canada", flag: "🇨🇦", note: "Affordable, PR-friendly pathways", img: destCanada },
-  { name: "Europe", flag: "🇪🇺", note: "Low tuition, English-taught degrees", img: destEurope },
-  { name: "Malaysia", flag: "🇲🇾", note: "Budget-friendly quality education", img: destMalaysia },
-  { name: "Turkey", flag: "🇹🇷", note: "Scholarships & rich culture", img: destTurkey },
-  { name: "UAE", flag: "🇦🇪", note: "Global campuses close to home", img: destUae },
+  { name: "United Kingdom", flag: "🇬🇧", note: "Your global education journey starts here—UK", img: destUk },
+  { name: "United States", flag: "🇺🇸", note: "Your global education journey starts here—USA", img: destUsa },
+  { name: "Australia", flag: "🇦🇺", note: "Your global education journey starts here—Australia", img: destAustralia },
+  { name: "Canada", flag: "🇨🇦", note: "Your global education journey starts here—Canada", img: destCanada },
+  { name: "Europe", flag: "🇪🇺", note: "Your global education journey starts here—Europe", img: destEurope },
+  { name: "Malaysia", flag: "🇲🇾", note: "Your global education journey starts here—Malaysia", img: destMalaysia },
+  { name: "Turkey", flag: "🇹🇷", note: "Your global education journey starts here—Turkey", img: destTurkey },
+  { name: "UAE", flag: "🇦🇪", note: "Your global education journey starts here—UAE", img: destUae },
 ];
 
 
