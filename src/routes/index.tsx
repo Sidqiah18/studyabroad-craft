@@ -70,7 +70,7 @@ const services = [
   },
   {
     icon: Wallet,
-    title: "Smart Funding",
+    title: "Financial Assistance",
     body: "Scholarship shortlisting and financial documentation guidance so cost never blocks your plan.",
   },
   {
