@@ -144,7 +144,7 @@ export function SuccessStories() {
                     {s.course}
                   </p>
                   <p className="mt-1 text-xs font-semibold text-primary">
-                    {s.flag} {s.university}, {s.country}
+                    {s.country}
                   </p>
                 </div>
               </div>
