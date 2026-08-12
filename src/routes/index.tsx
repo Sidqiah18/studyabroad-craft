@@ -210,7 +210,7 @@ function Index() {
                 {[
                   "Transparent counselling",
                   "British Council- Trained & Certified",
-                  "End-to-end visa assistance",
+                  "End-to-end process assistance",
                   "Scholarship-first approach",
                 ].map((i) => (
                   <li key={i} className="flex items-start gap-2 text-sm">
