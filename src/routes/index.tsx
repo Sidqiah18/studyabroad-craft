@@ -90,7 +90,7 @@ const services = [
   },
   {
     icon: Star,
-    title: "Lifetime Support",
+    title: "Continued Support",
     body: "Guidance that continues after arrival — extensions, part-time work rules and next steps.",
   },
 ];
