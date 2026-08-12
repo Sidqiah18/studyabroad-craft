@@ -94,7 +94,7 @@ export function SuccessStories() {
             Success stories
           </span>
           <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-            Students who made it abroad with SIA
+            Students who made it abroad with SIA Global Consultants
           </h2>
           <p className="mt-4 text-muted-foreground">
             Real journeys from Pakistan to campuses around the world — admissions, scholarships and
