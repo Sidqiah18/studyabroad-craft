@@ -65,7 +65,7 @@ const destinations = [
 const services = [
   {
     icon: GraduationCap,
-    title: "Tailored Pathway",
+    title: "Strategic Guidance",
     body: "Personalised university and course selection matched to your profile, budget and career goals.",
   },
   {
