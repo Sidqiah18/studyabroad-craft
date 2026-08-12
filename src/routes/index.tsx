@@ -167,8 +167,8 @@ function Index() {
               <img
                 src={heroImg}
                 alt="International student on a university campus"
-                width={1408}
-                height={1600}
+                width={1200}
+                height={1500}
                 className="relative aspect-[4/5] w-full rounded-[2rem] object-cover shadow-lift"
               />
               <div className="absolute -bottom-5 left-4 rounded-2xl border border-border bg-card px-4 py-3 shadow-lift sm:left-8">
