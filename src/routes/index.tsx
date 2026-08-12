@@ -208,7 +208,7 @@ function Index() {
               </p>
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                 {[
-                  "Transparent, honest counselling",
+                  "Transparent counselling",
                   "Certified expert counsellors",
                   "End-to-end visa assistance",
                   "Scholarship-first approach",
