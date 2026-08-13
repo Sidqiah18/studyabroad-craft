@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   GraduationCap,
   Wallet,
@@ -13,14 +13,6 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-student.jpg";
 import aboutImg from "@/assets/about-students.jpg";
-import destUk from "@/assets/dest-uk.jpg";
-import destUsa from "@/assets/dest-usa.jpg";
-import destAustralia from "@/assets/dest-australia.jpg";
-import destCanada from "@/assets/dest-canada.jpg";
-import destEurope from "@/assets/dest-europe.jpg";
-import destMalaysia from "@/assets/dest-malaysia.jpg";
-import destTurkey from "@/assets/dest-turkey.jpg";
-import destUae from "@/assets/dest-uae.jpg";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { CountUp } from "@/components/site/CountUp";
@@ -50,16 +42,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const destinations = [
-  { name: "United Kingdom", flag: "🇬🇧", note: "Your global education journey starts here—UK", img: destUk },
-  { name: "United States", flag: "🇺🇸", note: "Your global education journey starts here—USA", img: destUsa },
-  { name: "Australia", flag: "🇦🇺", note: "Your global education journey starts here—Australia", img: destAustralia },
-  { name: "Canada", flag: "🇨🇦", note: "Your global education journey starts here—Canada", img: destCanada },
-  { name: "Europe", flag: "🇪🇺", note: "Your global education journey starts here—Europe", img: destEurope },
-  { name: "Malaysia", flag: "🇲🇾", note: "Your global education journey starts here—Malaysia", img: destMalaysia },
-  { name: "Turkey", flag: "🇹🇷", note: "Your global education journey starts here—Turkey", img: destTurkey },
-  { name: "UAE", flag: "🇦🇪", note: "Your global education journey starts here—UAE", img: destUae },
-];
+import { destinations } from "@/lib/destinations";
+
 
 
 const services = [
@@ -241,9 +225,10 @@ function Index() {
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {destinations.map((d) => (
-                <a
+                <Link
                   key={d.name}
-                  href="#contact"
+                  to="/destinations/$slug"
+                  params={{ slug: d.slug }}
                   className="group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-lift focus:outline-none focus-visible:border-primary"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
@@ -275,7 +260,7 @@ function Index() {
                       <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
 
