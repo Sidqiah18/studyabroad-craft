@@ -233,9 +233,10 @@ function Index() {
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {destinations.map((d) => (
-                <a
+                <Link
                   key={d.name}
-                  href="#contact"
+                  to="/destinations/$slug"
+                  params={{ slug: d.slug }}
                   className="group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-lift focus:outline-none focus-visible:border-primary"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
