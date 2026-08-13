@@ -50,16 +50,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const destinations = [
-  { name: "United Kingdom", flag: "🇬🇧", note: "Your global education journey starts here—UK", img: destUk },
-  { name: "United States", flag: "🇺🇸", note: "Your global education journey starts here—USA", img: destUsa },
-  { name: "Australia", flag: "🇦🇺", note: "Your global education journey starts here—Australia", img: destAustralia },
-  { name: "Canada", flag: "🇨🇦", note: "Your global education journey starts here—Canada", img: destCanada },
-  { name: "Europe", flag: "🇪🇺", note: "Your global education journey starts here—Europe", img: destEurope },
-  { name: "Malaysia", flag: "🇲🇾", note: "Your global education journey starts here—Malaysia", img: destMalaysia },
-  { name: "Turkey", flag: "🇹🇷", note: "Your global education journey starts here—Turkey", img: destTurkey },
-  { name: "UAE", flag: "🇦🇪", note: "Your global education journey starts here—UAE", img: destUae },
-];
+import { destinations } from "@/lib/destinations";
+
 
 
 const services = [
