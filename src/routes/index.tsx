@@ -13,14 +13,6 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-student.jpg";
 import aboutImg from "@/assets/about-students.jpg";
-import destUk from "@/assets/dest-uk.jpg";
-import destUsa from "@/assets/dest-usa.jpg";
-import destAustralia from "@/assets/dest-australia.jpg";
-import destCanada from "@/assets/dest-canada.jpg";
-import destEurope from "@/assets/dest-europe.jpg";
-import destMalaysia from "@/assets/dest-malaysia.jpg";
-import destTurkey from "@/assets/dest-turkey.jpg";
-import destUae from "@/assets/dest-uae.jpg";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { CountUp } from "@/components/site/CountUp";
