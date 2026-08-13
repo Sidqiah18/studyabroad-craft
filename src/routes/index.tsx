@@ -268,7 +268,7 @@ function Index() {
                       <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
 
