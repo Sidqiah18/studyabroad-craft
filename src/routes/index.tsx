@@ -104,7 +104,7 @@ function Index() {
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:py-24">
             <div>
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary">
-                Study abroad consultants
+                #1 Study abroad consultants
               </span>
               <h1 className="mt-5 font-recoleta text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
                 Making international education{" "}
