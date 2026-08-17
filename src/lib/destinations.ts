@@ -83,7 +83,7 @@ export const destinations: Destination[] = [
     ],
     intakes: "Fall (August) and Spring (January)",
     tuition: "$17,000 – $100,000 per year",
-    living: "$10,000 – $15,000 per year",
+    living: "$10,000 – $20,000 per year",
     work: "20 hours per week on campus during term",
     requirements: [
       "Transcripts with strong GPA",
