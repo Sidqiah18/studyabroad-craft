@@ -87,7 +87,7 @@ export const destinations: Destination[] = [
     work: "20 hours per week on campus during term",
     requirements: [
       "Transcripts with strong GPA",
-      "IELTS 6.5 / TOEFL 79+, duolingo 100-130",
+      "TOEFL 105–112, IELTS 7.5–8, and Duolingo 135–145",
       "SOP, resume and letters of recommendation",
       "I-20 issuance and SEVIS fee payment",
       "Bank statements covering one year of study",
