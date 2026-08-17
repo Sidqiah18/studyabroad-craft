@@ -67,7 +67,7 @@ export const destinations: Destination[] = [
     img: destUsa,
     tagline: "Flexible degrees, research funding and OPT work rights",
     intro:
-      "The USA offers the widest choice of programmes in the world, with generous assistantships, research funding and up to three years of OPT for STEM graduates.",
+      "The USA offers the widest choice of programmes in the world, with generous assistantships, research funding and unparalleled range of academic excellence",
     highlights: [
       "Over 4,000 accredited universities and colleges",
       "12 months OPT, extended to 36 months for STEM",
