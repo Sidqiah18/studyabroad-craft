@@ -135,7 +135,7 @@ export const destinations: Destination[] = [
     img: destCanada,
     tagline: "Affordable tuition with a clear pathway to residency",
     intro:
-      "Canada offers high-quality education at competitive fees, plus a Post-Graduation Work Permit of up to three years and well-defined immigration pathways.",
+      "Canada offers high-quality education at competitive fees, along with a Post-Graduation Work Permit of up to three years, giving international students valuable opportunities to gain work experience after graduation.",
     highlights: [
       "Post-Graduation Work Permit up to 3 years",
       "Lower tuition than the USA and UK",
