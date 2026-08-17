@@ -151,7 +151,7 @@ export const destinations: Destination[] = [
     ],
     intakes: "January and September",
     tuition: "CAD 15,000 – 30,000 per year",
-    living: "CAD 12,000 – 15,000 per year",
+    living: "CAD 20,000 – 15,000 per year",
     work: "24 hours per week off campus during term",
     requirements: [
       "IELTS 6.0–6.5 with no band below 6.0",
