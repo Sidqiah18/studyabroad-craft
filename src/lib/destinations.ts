@@ -103,7 +103,7 @@ export const destinations: Destination[] = [
     intro:
       "Australia combines G-8 universities with generous post-study work visas and unlimited work rights during vacation, making it a favorite for career-focused students.",
     highlights: [
-      "2–4 year Temporary Graduate (485) visa",
+      "World's Best living environment",
       "Group of Eight universities ranked globally",
       "Regional study bonus points for permanent residency",
       "Safe cities with a large international community",
