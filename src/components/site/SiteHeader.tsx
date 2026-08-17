@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Menu, X, Mail, Clock } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { ApplyDialog } from "./ApplyDialog";
 
+type NavLink = { label: string; to?: string; href?: string };
 
-const links = [
-  { href: "#about", label: "About" },
-  { href: "#destinations", label: "Destinations" },
-  { href: "#services", label: "Services" },
-  { href: "#process", label: "Process" },
-  { href: "#stories", label: "Success stories" },
-  { href: "#contact", label: "Contact" },
+const links: NavLink[] = [
+  { label: "About", to: "/about" },
+  { label: "Destinations", href: "#destinations" },
+  { label: "Services", href: "#services" },
+  { label: "Process", href: "#process" },
+  { label: "Success stories", href: "#stories" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function SiteHeader() {
