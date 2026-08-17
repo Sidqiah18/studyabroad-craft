@@ -3,15 +3,15 @@ import { Menu, X, Mail, Clock } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { ApplyDialog } from "./ApplyDialog";
 
-type NavLink = { label: string; to?: string; href?: string };
+type NavLink = { label: string; to?: string; hash?: string };
 
 const links: NavLink[] = [
   { label: "About", to: "/about" },
-  { label: "Destinations", href: "#destinations" },
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Success stories", href: "#stories" },
-  { label: "Contact", href: "#contact" },
+  { label: "Destinations", to: "/", hash: "destinations" },
+  { label: "Services", to: "/", hash: "services" },
+  { label: "Process", to: "/", hash: "process" },
+  { label: "Success stories", to: "/", hash: "stories" },
+  { label: "Contact", to: "/", hash: "contact" },
 ];
 
 export function SiteHeader() {
@@ -32,7 +32,7 @@ export function SiteHeader() {
 
       <div className="border-b border-border/60 bg-background/85 backdrop-blur-md">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          <a href="#top" className="flex items-center gap-2.5">
+          <Link to="/" className="flex items-center gap-2.5">
             <span className="grid size-9 place-items-center rounded-xl bg-hero-gradient text-sm font-bold text-primary-foreground">
               S
             </span>
@@ -40,29 +40,19 @@ export function SiteHeader() {
               <span className="block font-display text-sm font-bold">SIA Global Consults</span>
               <span className="block text-[11px] text-muted-foreground">Study abroad experts</span>
             </span>
-          </a>
+          </Link>
 
           <div className="hidden items-center gap-7 lg:flex">
-            {links.map((l) =>
-              l.to ? (
-                <Link
-                  key={l.to}
-                  to={l.to}
-                  activeProps={{ className: "text-primary" }}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-                >
-                  {l.label}
-                </Link>
-              ) : (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-                >
-                  {l.label}
-                </a>
-              ),
-            )}
+            {links.map((l) => (
+              <Link
+                key={l.label}
+                to={l.to!}
+                {...(l.hash ? { hash: l.hash } : { activeProps: { className: "text-primary" } })}
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                {l.label}
+              </Link>
+            ))}
           </div>
 
           <div className="flex items-center gap-2">
@@ -85,28 +75,17 @@ export function SiteHeader() {
         {open && (
           <div className="border-t border-border bg-background lg:hidden">
             <div className="mx-auto flex max-w-6xl flex-col px-6 py-3">
-              {links.map((l) =>
-                l.to ? (
-                  <Link
-                    key={l.to}
-                    to={l.to}
-                    onClick={() => setOpen(false)}
-                    activeProps={{ className: "text-primary" }}
-                    className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
-                  >
-                    {l.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={l.href}
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
-                  >
-                    {l.label}
-                  </a>
-                ),
-              )}
+              {links.map((l) => (
+                <Link
+                  key={l.label}
+                  to={l.to!}
+                  {...(l.hash ? { hash: l.hash } : { activeProps: { className: "text-primary" } })}
+                  onClick={() => setOpen(false)}
+                  className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
+                >
+                  {l.label}
+                </Link>
+              ))}
               <ApplyDialog>
                 <button
                   onClick={() => setOpen(false)}
