@@ -33,10 +33,10 @@ export const destinations: Destination[] = [
     img: destUk,
     tagline: "World-ranked universities and one-year master's degrees",
     intro:
-      "The UK remains the first choice for Pakistani students thanks to globally respected degrees, shorter programme lengths and a two-year Graduate Route visa after graduation.",
+      "The UK remains the first choice for Pakistani students thanks to globally respected degrees, shorter program lengths. ",
     highlights: [
       "One-year master's programmes reduce total cost",
-      "2-year post-study Graduate Route work visa",
+      "Major Global hub for higher education",
       "Scholarships such as Chevening and university merit awards",
       "Large Pakistani student community and direct flights",
     ],
@@ -48,9 +48,9 @@ export const destinations: Destination[] = [
       "Queen Mary University of London",
     ],
     intakes: "January, May and September",
-    tuition: "£11,000 – £22,000 per year",
-    living: "£9,600 – £12,000 per year",
-    work: "20 hours per week during term, full time in holidays",
+    tuition: "£16,000 – £40,000 per year",
+    living: "£14,052 – £18,360 per year",
+    work: "20 hours per week ",
     requirements: [
       "Academic transcripts and degree certificates",
       "IELTS 6.0–6.5 (or approved alternative)",
