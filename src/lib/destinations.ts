@@ -101,7 +101,7 @@ export const destinations: Destination[] = [
     img: destAustralia,
     tagline: "Strong post-study work rights and a high quality of life",
     intro:
-      "Australia combines top-100 universities with generous post-study work visas and unlimited work rights during vacation, making it a favourite for career-focused students.",
+      "Australia combines G-8 universities with generous post-study work visas and unlimited work rights during vacation, making it a favorite for career-focused students.",
     highlights: [
       "2–4 year Temporary Graduate (485) visa",
       "Group of Eight universities ranked globally",
