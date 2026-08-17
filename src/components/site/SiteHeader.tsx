@@ -47,8 +47,7 @@ export function SiteHeader() {
               <Link
                 key={l.label}
                 to={l.to!}
-                hash={l.hash}
-                activeProps={l.hash ? undefined : { className: "text-primary" }}
+                {...(l.hash ? { hash: l.hash } : { activeProps: { className: "text-primary" } })}
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
               >
                 {l.label}
@@ -76,28 +75,17 @@ export function SiteHeader() {
         {open && (
           <div className="border-t border-border bg-background lg:hidden">
             <div className="mx-auto flex max-w-6xl flex-col px-6 py-3">
-              {links.map((l) =>
-                l.to ? (
-                  <Link
-                    key={l.to}
-                    to={l.to}
-                    onClick={() => setOpen(false)}
-                    activeProps={{ className: "text-primary" }}
-                    className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
-                  >
-                    {l.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={l.href}
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
-                  >
-                    {l.label}
-                  </a>
-                ),
-              )}
+              {links.map((l) => (
+                <Link
+                  key={l.label}
+                  to={l.to!}
+                  {...(l.hash ? { hash: l.hash } : { activeProps: { className: "text-primary" } })}
+                  onClick={() => setOpen(false)}
+                  className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
+                >
+                  {l.label}
+                </Link>
+              ))}
               <ApplyDialog>
                 <button
                   onClick={() => setOpen(false)}
