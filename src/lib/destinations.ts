@@ -184,7 +184,7 @@ export const destinations: Destination[] = [
       "Sapienza University of Rome",
     ],
     intakes: "Winter (September) and Summer (February)",
-    tuition: "€0 – €12,000 per year depending on country",
+    tuition: "€0 – €20,000 per year ",
     living: "€8,000 – €12,000 per year",
     work: "Typically 20 hours per week during term",
     requirements: [
