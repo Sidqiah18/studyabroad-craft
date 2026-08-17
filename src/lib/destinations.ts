@@ -137,7 +137,7 @@ export const destinations: Destination[] = [
     intro:
       "Canada offers high-quality education at competitive fees, along with a Post-Graduation Work Permit of up to three years, giving international students valuable opportunities to gain work experience after graduation.",
     highlights: [
-      "Post-Graduation Work Permit up to 3 years",
+      "Affordable living",
       "Lower tuition than the USA and UK",
       "Express Entry pathways for graduates",
       "Co-op and paid internship programmes",
