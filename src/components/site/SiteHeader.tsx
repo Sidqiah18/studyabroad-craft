@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Menu, X, Mail, Clock } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { ApplyDialog } from "./ApplyDialog";
 
+type NavLink = { label: string; to?: string; href?: string };
 
-const links = [
-  { href: "#about", label: "About" },
-  { href: "#destinations", label: "Destinations" },
-  { href: "#services", label: "Services" },
-  { href: "#process", label: "Process" },
-  { href: "#stories", label: "Success stories" },
-  { href: "#contact", label: "Contact" },
+const links: NavLink[] = [
+  { label: "About", to: "/about" },
+  { label: "Destinations", href: "#destinations" },
+  { label: "Services", href: "#services" },
+  { label: "Process", href: "#process" },
+  { label: "Success stories", href: "#stories" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function SiteHeader() {
@@ -41,15 +43,26 @@ export function SiteHeader() {
           </a>
 
           <div className="hidden items-center gap-7 lg:flex">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-              >
-                {l.label}
-              </a>
-            ))}
+            {links.map((l) =>
+              l.to ? (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  activeProps={{ className: "text-primary" }}
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                >
+                  {l.label}
+                </Link>
+              ) : (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                >
+                  {l.label}
+                </a>
+              ),
+            )}
           </div>
 
           <div className="flex items-center gap-2">
@@ -72,16 +85,28 @@ export function SiteHeader() {
         {open && (
           <div className="border-t border-border bg-background lg:hidden">
             <div className="mx-auto flex max-w-6xl flex-col px-6 py-3">
-              {links.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
-                >
-                  {l.label}
-                </a>
-              ))}
+              {links.map((l) =>
+                l.to ? (
+                  <Link
+                    key={l.to}
+                    to={l.to}
+                    onClick={() => setOpen(false)}
+                    activeProps={{ className: "text-primary" }}
+                    className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
+                  >
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setOpen(false)}
+                    className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
+                  >
+                    {l.label}
+                  </a>
+                ),
+              )}
               <ApplyDialog>
                 <button
                   onClick={() => setOpen(false)}
