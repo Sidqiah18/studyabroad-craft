@@ -117,7 +117,7 @@ export const destinations: Destination[] = [
     ],
     intakes: "February, July and November",
     tuition: "AUD 45,000 – 70,000 per year",
-    living: "AUD 24,00 per year (visa requirement)",
+    living: "AUD 34,500 per year (visa requirement)",
     work: "48 hours per fortnight during term",
     requirements: [
       "Academic documents and IELTS 6.0–6.5",
