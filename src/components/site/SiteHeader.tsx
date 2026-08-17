@@ -85,16 +85,28 @@ export function SiteHeader() {
         {open && (
           <div className="border-t border-border bg-background lg:hidden">
             <div className="mx-auto flex max-w-6xl flex-col px-6 py-3">
-              {links.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
-                >
-                  {l.label}
-                </a>
-              ))}
+              {links.map((l) =>
+                l.to ? (
+                  <Link
+                    key={l.to}
+                    to={l.to}
+                    onClick={() => setOpen(false)}
+                    activeProps={{ className: "text-primary" }}
+                    className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
+                  >
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setOpen(false)}
+                    className="border-b border-border/60 py-3 text-sm font-medium last:border-0"
+                  >
+                    {l.label}
+                  </a>
+                ),
+              )}
               <ApplyDialog>
                 <button
                   onClick={() => setOpen(false)}
