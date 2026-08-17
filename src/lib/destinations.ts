@@ -70,7 +70,7 @@ export const destinations: Destination[] = [
       "The USA offers the widest choice of programmes in the world, with generous assistantships, research funding and unparalleled range of academic excellence",
     highlights: [
       "Over 4,000 accredited universities and colleges",
-      "Major Global hub for higher education",
+      "12 months OPT, extended to 36 months for STEM",
       "Merit scholarships and graduate assistantships",
       "Change majors and build a flexible course plan",
     ],
