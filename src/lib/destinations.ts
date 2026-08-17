@@ -82,7 +82,7 @@ export const destinations: Destination[] = [
       "University of Illinois Chicago",
     ],
     intakes: "Fall (August) and Spring (January)",
-    tuition: "$18,000 – $40,000 per year",
+    tuition: "$17,000 – $100,000 per year",
     living: "$10,000 – $15,000 per year",
     work: "20 hours per week on campus during term",
     requirements: [
