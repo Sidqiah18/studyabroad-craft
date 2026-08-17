@@ -149,7 +149,7 @@ export const destinations: Destination[] = [
       "University of Manitoba",
       "Thompson Rivers University",
     ],
-    intakes: "January, May and September",
+    intakes: "January and September",
     tuition: "CAD 15,000 – 30,000 per year",
     living: "CAD 12,000 – 15,000 per year",
     work: "24 hours per week off campus during term",
