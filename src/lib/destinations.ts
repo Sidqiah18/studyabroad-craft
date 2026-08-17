@@ -185,7 +185,7 @@ export const destinations: Destination[] = [
     ],
     intakes: "Winter (September) and Summer (February)",
     tuition: "€0 – €20,000 per year ",
-    living: "€8,000 – €12,000 per year",
+    living: "€8,000 – €13,000 per year",
     work: "Typically 20 hours per week during term",
     requirements: [
       "Attested transcripts and degree equivalence",
