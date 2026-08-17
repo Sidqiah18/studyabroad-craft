@@ -139,7 +139,7 @@ export const destinations: Destination[] = [
     highlights: [
       "Affordable living",
       "Affordable tuition fees",
-      "Express Entry pathways for graduates",
+      "Study at the most beautiful campuses ",
       "Co-op and paid internship programmes",
     ],
     universities: [
