@@ -151,12 +151,21 @@ html {
 
 section[id],
 [id="top"] {
+  scroll-margin-top: 5rem;
+}
+
+/* keep process aligned where it already looks right */
+section#process {
   scroll-margin-top: 7rem;
 }
 
 @media (max-width: 767px) {
   section[id],
   [id="top"] {
+    scroll-margin-top: 3.5rem;
+  }
+
+  section#process {
     scroll-margin-top: 5rem;
   }
 }
