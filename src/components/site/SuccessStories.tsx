@@ -161,7 +161,8 @@ export function SuccessStories() {
             >
               <div className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all duration-500 hover:-translate-y-1.5 hover:border-primary hover:shadow-lift">
                 <Quote className="size-7 text-aqua" />
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-4 flex-1 overflow-y-auto pr-1 text-sm leading-relaxed text-muted-foreground"
+                   style={{ maxHeight: "10rem" }}>
                   “{s.quote}”
                 </p>
                 <div className="mt-6 border-t border-border pt-4">
