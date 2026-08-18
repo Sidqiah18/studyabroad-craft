@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Menu, X, Mail, Clock } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { ApplyDialog } from "./ApplyDialog";
+import logoAsset from "@/assets/sia-logo.png.asset.json";
+
+const logoUrl = logoAsset.url;
 
 type NavLink = { label: string; to?: string; hash?: string };
 
@@ -32,14 +35,14 @@ export function SiteHeader() {
 
       <div className="border-b border-border/60 bg-background/85 backdrop-blur-md">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          <Link to="/" className="flex items-center gap-2.5">
-            <span className="grid size-9 place-items-center rounded-xl bg-hero-gradient text-sm font-bold text-primary-foreground">
-              S
-            </span>
-            <span className="leading-tight">
-              <span className="block font-display text-sm font-bold">SIA Global Consults</span>
-              <span className="block text-[11px] text-muted-foreground">Study abroad experts</span>
-            </span>
+          <Link to="/" className="flex items-center" aria-label="SIA Global Consultants home">
+            <img
+              src={logoUrl}
+              alt="SIA Global Consultants — Where Global Journeys Begin"
+              className="h-11 w-auto rounded-lg"
+              width={440}
+              height={192}
+            />
           </Link>
 
           <div className="hidden items-center gap-7 lg:flex">
