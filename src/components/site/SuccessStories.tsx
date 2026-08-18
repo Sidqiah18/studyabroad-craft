@@ -65,6 +65,33 @@ const stories: Story[] = [
     quote:
       "I wanted quality education on a tight budget. SIA found me a scholarship-backed programme in Turkey that my family could comfortably afford.",
   },
+  {
+    name: "Angela Daniel",
+    course: "Master's Program",
+    university: "London Metropolitan University",
+    country: "United Kingdom",
+    flag: "🇬🇧",
+    quote:
+      "I would like to express my heartfelt gratitude to SIA Global Consultants for helping me achieve my dream and guiding me toward a brighter future. A few years back, a friend recommended this consultancy to me. When I first visited their office, Mr. Jonathan guided me throughout the entire journey and made the process completely hassle-free. The entire team supported me step by step — from admission to visa processing, all the way to my departure — ensuring everything was done smoothly and without mistakes. Their communication was always clear, and they were incredibly polite and patient in answering my many questions. Today, I am successfully enrolled in a Master's program at London Metropolitan University. It truly feels like a dream come true to begin this new chapter of my life in the UK.",
+  },
+  {
+    name: "Adil Amanat",
+    course: "Study Abroad Guidance",
+    university: "SIA Global Consultants",
+    country: "Pakistan",
+    flag: "🇵🇰",
+    quote:
+      "I'm writing this on behalf of my friend who used SIA Global Consultants for study abroad guidance. Overall, their experience was good. The team helped with the application process, documentation, and provided proper guidance at each step. They were supportive and responsive most of the time, which made things easier. That said, I'd still suggest doing your own research alongside. Overall, it was a positive experience for my friend.",
+  },
+  {
+    name: "Jonathan Matthew",
+    course: "University Admission",
+    university: "Turkey",
+    country: "Turkey",
+    flag: "🇹🇷",
+    quote:
+      "My sister got admitted into Turkey with the help of one of the finest consultants in Pakistan I could have found. We were quite stressed regarding her case, but it went seamless and with almost zero tension. The team is very, very helpful — every day we got updates from the admission department, and the visa compliance team was always joyful and kept the same positive attitude throughout. Really appreciated, thanks guys.",
+  },
 ];
 
 export function SuccessStories() {
