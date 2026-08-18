@@ -144,3 +144,19 @@
   background-clip: text;
   color: transparent;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id],
+[id="top"] {
+  scroll-margin-top: 7rem;
+}
+
+@media (max-width: 767px) {
+  section[id],
+  [id="top"] {
+    scroll-margin-top: 5rem;
+  }
+}
