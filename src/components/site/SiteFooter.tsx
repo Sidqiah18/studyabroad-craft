@@ -1,15 +1,34 @@
 import { Instagram, Linkedin, Facebook, Phone, Mail } from "lucide-react";
+// Use the uploaded public logo file.
+const logoUrl = "/logo.svg.jpeg";
+
+const destinations = [
+  { label: "Study in United Kingdom", href: "/destinations/united-kingdom" },
+  { label: "Study in United States", href: "/destinations/united-states" },
+  { label: "Study in Australia", href: "/destinations/australia" },
+  { label: "Study in Canada", href: "/destinations/canada" },
+  { label: "Study in Europe", href: "/destinations/europe" },
+  { label: "Study in Malaysia", href: "/destinations/malaysia" },
+  { label: "Study in Turkey", href: "/destinations/turkey" },
+];
 
 export function SiteFooter() {
+  const socialLinks = [
+    "https://www.instagram.com/siaglobalconsults?igsh=MWVlNnN5c2U4enkzZA%3D%3D&utm_source=qr",
+    "https://www.linkedin.com/company/siaglobalconsults/?viewAsMember=true",
+    "https://www.facebook.com/profile.php?id=61580416598358",
+  ];
+
   return (
     <footer className="border-t border-border bg-secondary/50">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2.5">
-            <span className="grid size-9 place-items-center rounded-xl bg-hero-gradient text-sm font-bold text-primary-foreground">
-              S
-            </span>
-            <span className="font-display text-base font-bold">SIA Global Consults</span>
+          <div className="flex items-center">
+            <img
+              src={logoUrl}
+              alt="SIA Global Consults logo"
+              className="h-14 w-auto object-contain"
+            />
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
             Making international education accessible to everyone. Discover your path to success at
@@ -19,7 +38,9 @@ export function SiteFooter() {
             {[Instagram, Linkedin, Facebook].map((Icon, i) => (
               <a
                 key={i}
-                href="#contact"
+                href={socialLinks[i]}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Social link"
                 className="grid size-9 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
               >
@@ -32,15 +53,13 @@ export function SiteFooter() {
         <div>
           <h3 className="text-sm font-semibold">Destinations</h3>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            {["United Kingdom", "United States", "Australia", "Canada", "Europe", "Malaysia", "Turkey"].map(
-              (d) => (
-                <li key={d}>
-                  <a href="#destinations" className="hover:text-primary">
-                    Study in {d}
-                  </a>
-                </li>
-              ),
-            )}
+            {destinations.map((d) => (
+              <li key={d.label}>
+                <a href={d.href} className="hover:text-primary">
+                  {d.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 

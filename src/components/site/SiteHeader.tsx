@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Menu, X, Mail, Clock } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { ApplyDialog } from "./ApplyDialog";
-import logoAsset from "@/assets/sia-logo.png.asset.json";
-
-const logoUrl = logoAsset.url;
+// Use the uploaded public logo file.
+const logoUrl = "/logo.svg.jpeg";
 
 type NavLink = { label: string; to?: string; hash?: string };
 

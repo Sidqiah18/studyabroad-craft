@@ -51,12 +51,7 @@ const values = [
   },
 ];
 
-const milestones = [
-  { year: "2018", title: "Founded in Karachi", body: "SIA Global Consultants began with a mission to make studying abroad accessible and transparent." },
-  { year: "2020", title: "100+ university partners", body: "Built partnerships across the UK, USA, Australia, Canada and Europe to broaden student choice." },
-  { year: "2023", title: "99% visa success rate", body: "Refined our visa file building and mock interview coaching to one of the highest success rates in the industry." },
-  { year: "2026", title: "10M+ in scholarships won", body: "Helped students secure over $10 million in scholarships across hundreds of successful placements." },
-];
+// timeline milestones removed per request
 
 function AboutPage() {
   return (
@@ -171,25 +166,7 @@ function AboutPage() {
           </div>
         </section>
 
-        {/* Timeline */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
-          <div className="max-w-2xl">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-              Our journey
-            </span>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">How we got here</h2>
-          </div>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {milestones.map((m) => (
-              <div key={m.year} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-                <span className="font-display text-3xl font-extrabold text-aqua">{m.year}</span>
-                <h3 className="mt-3 font-display text-base font-bold">{m.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{m.body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        {/* Our journey timeline removed */}
 
         {/* CTA */}
         <section id="contact" className="py-20">

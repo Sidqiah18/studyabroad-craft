@@ -171,7 +171,7 @@ function DestinationPage() {
                 ))}
               </ul>
               <p className="mt-4 text-xs text-muted-foreground">
-                Plus 100+ partner institutions — we shortlist based on your profile and budget.
+                Plus 100+ institutions — we shortlist based on your profile and budget.
               </p>
             </div>
           </div>
